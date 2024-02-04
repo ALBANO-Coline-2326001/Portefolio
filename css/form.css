@@ -1,0 +1,120 @@
+:root {
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: rgb(172, 74, 172);
+}
+
+/* Style du formulaire */
+.container_formulaire {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 12rem 12%;
+    z-index: -5;
+}
+
+form {
+    padding: 3em;
+    background-color: var(--second-bg-color);
+    border-radius: 10px;
+}
+
+form h1 {
+    font-size: 2em;
+    text-shadow: none;
+}
+
+form .separation {
+    width: 100%;
+    height: 1px;
+    background-color: var(--main-color);
+}
+
+form .corps_formulaire {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+form .corps_formulaire .groupe {
+    margin-top: 0.5em;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+form .corps_formulaire .gauche .groupe input {
+    margin-top: 0.5em;
+    padding: 10px 5px 10px 30px;
+    border: 1px solid var(--main-color);
+    border-radius: 5px;
+}
+
+form .corps_formulaire .gauche .groupe i {
+    position: absolute;
+    left: 0;
+    top: 35px;
+    padding: 9px 8px;
+    color: var(--main-color);
+}
+
+label {
+    font-size: 1.5em;
+}
+
+form .corps_formulaire .droite {
+    margin-left: 40px;
+}
+
+form .corps_formulaire .droite .groupe {
+    height: 100%;
+}
+
+form .corps_formulaire .droite .groupe textarea {
+    margin-top: 5px;
+    padding: 10px;
+    outline: none;
+    resize: none;
+    height: 71%;
+    background-color: #f8f8f8;
+    border: 1px solid var(--main-color);
+    border-radius: 5px;
+}
+
+form .pied_formulaire button {
+    font-size: 15px;
+    border: none;
+    outline: none;
+    background-color: var(--main-color);
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form .pied_formulaire button:hover {
+    transform: scale(1.05);
+    transition: all 0.5s ease;
+    background-color: var(--main-color);
+}
+
+
+
+
+@media screen and (max-width: 1000px) {
+    .auto-typing {
+        font-size: 0.7em;
+    }
+
+    form .corps_formulaire .droite {
+        margin-left: 0;
+    }
+
+    form .pied_formulaire button {
+        margin-top: 0px;
+
+    }
+
+    form {
+        padding: 1em;
+    }
+}
