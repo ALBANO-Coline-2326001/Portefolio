@@ -20,7 +20,7 @@
     --bg-color: #1f242d;
     --second-bg-color: #323946;
     --text-color: #fff;
-    --main-color: rgb(172, 74, 172);
+    --main-color: rgb(255, 20, 255);
 }
 
 html {
@@ -153,3 +153,130 @@ span {
     text-align: center;
     font-size: 4.5rem;
 }
+
+.parcours {
+    background-color: var(--second-bg-color);
+}
+
+.parcours h2 {
+    margin-bottom: 5rem;
+}
+
+.parcours-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.parcours-container .parcours-box {
+    flex: 1 1 30rem;
+    background: var(--bg-color);
+    background: blur(3px);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+    transition: all 0.5s ease;
+}
+
+.parcours-container .parcours-box:hover {
+    border-color: var(--main-color);
+    transform: scale(1.02);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.parcours-box i {
+    font-size: 6rem;
+    color: var(--main-color)
+}
+
+.parcours-box h3 {
+    font-size: 2.6rem;
+
+}
+
+.parcours-box p {
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+}
+
+.portefolio h2 {
+    margin-bottom: 4rem;
+}
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.portfolio-container .portfolio-box {
+    position: relative;
+    border-radius: 2rem;
+    overflow: hidden;
+    display: flex;
+}
+
+.portfolio-box img {
+    width: 100%;
+    transition: .5s ease;
+}
+
+.portfolio-box img:hover {
+    transform: scale(1.1);
+}
+
+
+.portfolio-box .portfolio-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: all 0.5s ease;
+}
+
+.portfolio-box:hover .portfolio-text {
+    transform: translateY(0%);
+}
+
+
+.portfolio-text h3 {
+    font-size: 5rem;
+}
+
+.portfolio-text p {
+    font-size: 2rem;
+    margin: 3rem 0 1rem;
+}
+
+.portfolio-text a {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+
+}
+
+.portfolio-text a i {
+    font-size: 3rem;
+    padding: 10%;
+    border-radius: 50%;
+    background: var(--text-color);
+    color: var(--second-bg-color);
+}
+
+/* 36:10 */
