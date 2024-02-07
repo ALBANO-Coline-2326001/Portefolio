@@ -39,6 +39,14 @@ section {
     color: var(--text-color);
 }
 
+.navbar .menu-hamburger {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 5%;
+}
+
 .header {
     position: fixed;
     top: 0;
@@ -50,6 +58,10 @@ section {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+}
+
+.header.sticky {
+    border-bottom: .1rem solid rgba(0, 0, 0, .2);
 }
 
 .logo {
@@ -279,4 +291,118 @@ span {
     color: var(--second-bg-color);
 }
 
-/* 36:10 */
+/* Footer*/
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--second-bg-color);
+}
+
+.footer-text p {
+    font-size: 1.6rem;
+}
+
+.footer-iconTop a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+    transition: all 0.5s ease;
+}
+
+
+.footer-iconTop a:hover {
+    box-shadow: 0 0 1rem var(--main-color);
+    transform: scale(1.1);
+}
+
+.footer-iconTop a i {
+    font-size: 2.4rem;
+    color: var(--second-bg-color);
+}
+
+@media screen and (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media screen and (max-width: 990px) {
+
+    .header {
+        padding: 2em 3%;
+    }
+
+    section {
+        padding: 10rem 3% 2rem;
+    }
+
+    .footer {
+        padding: 2rem 3%;
+    }
+
+    .home {
+        flex-direction: column;
+    }
+
+    .home-content h3 {
+        font-size: 2.6rem;
+    }
+
+    .home-img img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+
+
+    /* navbar*/
+    .navbar {
+        padding: 0;
+    }
+
+    .navbar .menu-hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        top: 0;
+        left: 0;
+        position: absolute;
+        backdrop-filter: blur(12px);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.5s ease;
+    }
+
+    .nav-links.mobile-menu {
+        margin-left: 0;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links a {
+        font-size: 400%;
+    }
+
+
+    .portfolio-container {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-box:active .portfolio-text {
+        transform: translateY(0%);
+    }
+}
